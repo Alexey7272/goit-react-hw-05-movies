@@ -1,0 +1,12 @@
+.layout {
+    padding: 20px;
+}
+
+.layout__item {
+    color: black;
+    font-size: larger;
+    font-weight: 500;
+    text-decoration: none;
+
+    margin: 15px;
+}
