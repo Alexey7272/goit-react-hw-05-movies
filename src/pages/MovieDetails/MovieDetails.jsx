@@ -7,7 +7,7 @@ import { BASE_IMG_URL } from "services/api";
 const MovieDetails = () => {
    const [movieDetails, setMovieDetails] = useState({});
    const { movieId } = useParams();
-   const { title, poster_path, release_date, vote_average, overview, genres } = movieDetails;
+   const { title, poster_path, vote_average, overview, genres } = movieDetails;
    const location = useLocation();
    const backlinkHref = location.state?.from ?? PAGE_NAMES.homepage;
    
