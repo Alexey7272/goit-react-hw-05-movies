@@ -3,6 +3,7 @@ import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import { PAGE_NAMES } from "router/paths";
 import { getMovieById } from "services/api";
 import { BASE_IMG_URL } from "services/api";
+import deafult_poster from "../../components/image/deafult_poster.png"
 
 const MovieDetails = () => {
    const [movieDetails, setMovieDetails] = useState({});
@@ -21,7 +22,7 @@ const MovieDetails = () => {
     <>
       <Link to={backlinkHref}>Go back</Link>
       <br/>
-      <img src={ `${BASE_IMG_URL}${poster_path}` } alt={ title } width='300px'/>
+      <img src={poster_path ? `${BASE_IMG_URL}${poster_path}` : deafult_poster} alt={ title } width='300px'/>
       <p> { title } </p>
       <p>  User Score: {vote_average ? `${Math.round(vote_average * 10)}%` : 0}</p>
       <h3>Overview</h3>

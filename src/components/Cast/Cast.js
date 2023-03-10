@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_IMG_URL, getMovieCredits } from "services/api";
+import deafult_image from "../image/deafult_poster.png"
 
 const Cast = () => {
     const [ cast, setCast ] = useState([]);
@@ -18,7 +19,7 @@ const Cast = () => {
                 return (
                     <li key={id}> 
                         <img
-                            src={`${BASE_IMG_URL}${profile_path}`}
+                            src={ profile_path ? `${BASE_IMG_URL}${profile_path}` : deafult_image}
                             alt={name}
                             width="100px"
                         ></img> 
