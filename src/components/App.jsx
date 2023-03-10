@@ -15,13 +15,13 @@ function App() {
    return (
     <Routes> 
       <Route path={PAGE_NAMES.homepage} element={<Layout/>}>
-        <Route path={PAGE_NAMES.homepage} element={ <HomePage/> }> </Route>
-        <Route path={PAGE_NAMES.movies} element={ <Movies/> }></Route>
+        <Route index element={ <HomePage/> }/>
+        <Route path={PAGE_NAMES.movies} element={ <Movies/> }/>
         <Route path={PAGE_NAMES.movieDetails} element={ <MovieDetails/>}>
-          <Route path={PAGE_NAMES.cast} element={ <Cast/> }></Route>
-          <Route path={PAGE_NAMES.reviews} element= { <Reviews/> }></Route>
+          <Route path={PAGE_NAMES.cast} element={ <Cast/> }/>
+          <Route path={PAGE_NAMES.reviews} element= { <Reviews/> }/>
         </Route>
-        <Route path="*" element={ <ErrorPage/> }> </Route>
+        <Route path="*" element={ <ErrorPage/> }/>
       </Route> 
     </Routes>
    );
